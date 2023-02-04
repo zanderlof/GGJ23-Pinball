@@ -31,10 +31,16 @@ public class Bumper : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force);
                 break;
             case "Edge":
-                //get direction from center of bumper to ball
-                direction = collision.gameObject.GetComponentInParent<Transform>().position - transform.position;
-                //apply force to the ball in the direction previously calculated
-                collision.gameObject.GetComponent<Rigidbody>().AddForce(direction.normalized * force);
+                //apply force to the ball in the direction of the blue arrow
+                collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+                break;
+            case "Flipper":
+                if(GetComponentInParent<Flipper>().IsMoving())
+                {
+                    //apply force to the ball in the direction of the blue arrow
+                    collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+                    break;
+                }
                 break;
             default:
                 break;
