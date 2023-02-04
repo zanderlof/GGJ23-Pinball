@@ -792,5 +792,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputAxis: LeftFlipper
   rotationTime: 0.05
-  startRotation: -93
-  endRotation: -148.027
+  startRotation: 0
+  endRotation: -61.582

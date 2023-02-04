@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputAxis: RightFlipper
   rotationTime: 0.05
-  startRotation: 88.079
-  endRotation: 28.177
+  startRotation: 173.503
+  endRotation: 229.775
 --- !u!1 &1548016975461512822
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,15 +129,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548016975461512822}
-  m_LocalRotation: {x: -1, y: 1.1593301e-10, z: -0, w: 0.0000000105979945}
-  m_LocalPosition: {x: 0.066805385, y: 0.65499985, z: -3.7608874}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.3, y: -0.61, z: -3.8}
   m_LocalScale: {x: -2.4864533, y: 1.4815031, z: 3.329783}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1548016976366941044}
   m_Father: {fileID: 1548016974446415225}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 180}
 --- !u!114 &1548016975461512828
 MonoBehaviour:
   m_ObjectHideFlags: 0
