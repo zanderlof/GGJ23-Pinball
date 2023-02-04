@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Round
   - Edge
+  - Left
+  - Right
   - Flipper
   layers:
   - Default
