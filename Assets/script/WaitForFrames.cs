@@ -7,9 +7,9 @@ public class WaitForFrames : CustomYieldInstruction
     private int frames;
 
     public WaitForFrames(int frames)
-	{
+    {
         this.frames = frames;
-	}
+    }
 
-	public override bool keepWaiting => frames-- > 0;
+    public override bool keepWaiting => frames-- > 0;
 }

@@ -61,3 +61,4 @@ public class MeleeEnemy : MonoBehaviour
 		yield return new WaitForSeconds(attackDuration);
 	}
 }
+

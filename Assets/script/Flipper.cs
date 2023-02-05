@@ -9,20 +9,23 @@ public class Flipper : MonoBehaviour
     [SerializeField] private float rotationTime;
     [SerializeField] private float startRotation;
     [SerializeField] private float endRotation;
-
+	
+    //data used for this script
     float targetRotation;
     float currentRotation;
     float currentRotationSpeed;
 
-	private void Awake()
-	{
+    //called when the object awakens
+    private void Awake()
+    {
         targetRotation = startRotation;
         currentRotation = startRotation;
         currentRotationSpeed = 0f;
         transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, currentRotation, 0);
-	}
+    }
 
-	void Update()
+    // Update is called once per frame
+    void Update()
     {
         bool activated = Input.GetButton(inputAxis);
         targetRotation = activated ? endRotation : startRotation;
