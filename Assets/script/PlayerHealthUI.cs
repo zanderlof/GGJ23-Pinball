@@ -37,6 +37,6 @@ public class PlayerHealthUI : MonoBehaviour
 
     void UpdateMaxHealth()
     {
-        m_HealthBar.maxValue = m_Player.GetHealthMax();
+        //m_HealthBar.maxValue = m_Player.GetHealthMax();
     }
 }
