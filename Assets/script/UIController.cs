@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-
+    [SerializeField] PlayerHealthUI healthUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +19,12 @@ public class UIController : MonoBehaviour
 
     public void Healed(int hp)
     {
-
+        healthUI.UpdateHealthUI(hp);
     }
 
     public void Damaged(int dmg)
     {
-
+        healthUI.UpdateHealthUI(dmg);
     }
 
     public void BumperHit(Transform pos)
@@ -37,22 +37,23 @@ public class UIController : MonoBehaviour
 
     }
 
-    public void ItemAquire(string item)
+    public void ItemAcquire(string item)
     {
 
     }
 
-    public void itemUse(string item)
+    public void ItemUse(string item)
     {
 
     }
 
-    Taking/healing damage + amount
-Hitting bumpers
-Damaging enemies
-Moving to another table
-Acquire/Use/Lose item
-Fall into gutter
+   /* Taking/healing damage + amount
+        Hitting bumpers
+        Damaging enemies
+        Moving to another table
+        Acquire/Use/Lose item
+        Fall into gutter
 
-        Also want to add player states for attacks executed., when they're in cooldown and recharged.
+    Also want to add player states for attacks executed., 
+    when they're in cooldown and recharged.*/
 }

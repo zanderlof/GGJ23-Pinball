@@ -34,13 +34,13 @@ public class Player : MonoBehaviour
             heal = healStrength;
         }
         health += heal;
-        ui.Healed(heal);
+        ui.Healed(health);
     }
 
     public void Damage(int dmg)
     {
         health -= dmg;
-        ui.Damaged(dmg);
+        ui.Damaged(health);
     }
 
 
