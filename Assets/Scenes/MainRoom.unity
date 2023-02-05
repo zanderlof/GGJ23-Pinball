@@ -271,7 +271,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24688
+  m_Name: pb_Mesh23800
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -671,7 +671,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24724
+  m_Name: pb_Mesh23832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3888,8 +3888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputAxis: RightFlipper
   rotationTime: 0.05
-  startRotation: 173.503
-  endRotation: 229.775
+  startRotation: 0
+  endRotation: 61.582
 --- !u!43 &1978066431
 Mesh:
   m_ObjectHideFlags: 0
