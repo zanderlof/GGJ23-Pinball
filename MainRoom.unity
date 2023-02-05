@@ -271,7 +271,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh23694
+=======
+  m_Name: pb_Mesh23800
+>>>>>>> 69112706a19eb8d81c79e59f258bc55088f13c94
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -671,7 +675,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh23726
+=======
+  m_Name: pb_Mesh23832
+>>>>>>> 69112706a19eb8d81c79e59f258bc55088f13c94
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2692,14 +2700,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -121.766235
       objectReference: {fileID: 0}
-    - target: {fileID: 5314039262370749457, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
-      propertyPath: m_HealthBar
-      value: 
-      objectReference: {fileID: 2024472581}
-    - target: {fileID: 5314039262370749457, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
-      propertyPath: m_HealthBarFill
-      value: 
-      objectReference: {fileID: 1631243042}
     - target: {fileID: 7755384671672629754, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2790,11 +2790,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
+--- !u!114 &1672794862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 725367879363491179, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
+  m_PrefabInstance: {fileID: 1672794861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1672794863 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4730553950984504193, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
   m_PrefabInstance: {fileID: 1672794861}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1672794864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5637174976829807312, guid: 87d5c39c86d5e4b45bb00249c0483dc4, type: 3}
+  m_PrefabInstance: {fileID: 1672794861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672794865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672794864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd415957ec728a04089ebaa94f4c941e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 6163959965749784606, guid: e04d8161bb83d9a47a6b2ced73b9a81b, type: 3}
+  m_HealthText: {fileID: 1672794862}
+  m_HealthBar: {fileID: 2024472581}
+  m_HealthBarFill: {fileID: 1631243042}
 --- !u!1 &1775045752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,8 +4138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputAxis: RightFlipper
   rotationTime: 0.05
-  startRotation: 173.503
-  endRotation: 229.775
+  startRotation: 0
+  endRotation: 61.582
 --- !u!43 &1978066431
 Mesh:
   m_ObjectHideFlags: 0
