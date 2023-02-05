@@ -273,8 +273,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0170c2e54b000404e94e09c48891b2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  m_maxHealth: 10
   defense: 0
+  m_damagedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &4646544981382543004
 Animator:
   serializedVersion: 5
