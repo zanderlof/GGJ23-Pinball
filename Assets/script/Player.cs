@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] int attack;
     [SerializeField] int shieldValue;
     [SerializeField] int healStrength;
+    [SerializeField] UIController ui;
 
     private int health;
 
@@ -28,16 +29,19 @@ public class Player : MonoBehaviour
 
     public void Heal(int heal = -1)
     {
-        if(heal < 0)
+        if(heal <= 0)
         {
-            health += healStrength;
-            return;
+            heal = healStrength;
         }
         health += heal;
+        ui.Healed(heal);
     }
 
     public void Damage(int dmg)
     {
         health -= dmg;
+        ui.Damaged(dmg);
     }
+
+
 }
