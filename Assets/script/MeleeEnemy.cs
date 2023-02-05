@@ -18,13 +18,14 @@ public class MeleeEnemy : MonoBehaviour
 
 	private void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();
 	}
 
-	private void Start()
+	private IEnumerator Start()
 	{
+		yield return null;
+		player = GameObject.FindGameObjectWithTag("Player");
 		StartCoroutine(EnemyRoutine());
 	}
 
@@ -56,9 +57,10 @@ public class MeleeEnemy : MonoBehaviour
 
 	private IEnumerator Attack()
 	{
-		Debug.Log("Attack!");
+		navMeshAgent.isStopped = true;
 		animator.SetTrigger("Attack");
 		yield return new WaitForSeconds(attackDuration);
+		navMeshAgent.isStopped = false;
 	}
 }
 
