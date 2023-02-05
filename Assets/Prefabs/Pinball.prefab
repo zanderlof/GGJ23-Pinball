@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6163959965749784602}
   - component: {fileID: 6163959965749784601}
   - component: {fileID: 6163959965749784606}
-  m_Layer: 0
+  - component: {fileID: 3065089993963414932}
+  m_Layer: 7
   m_Name: Pinball
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0b8b7f7d5dd0b314da222fc1edb75ee2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +94,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6163959965749784600}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 84e38a41727fe2e48849c18d0be495ed, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -131,3 +132,18 @@ MonoBehaviour:
   attack: 0
   shieldValue: 0
   healStrength: 25
+  ui: {fileID: 0}
+--- !u!114 &3065089993963414932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163959965749784600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0170c2e54b000404e94e09c48891b2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  defense: 0
