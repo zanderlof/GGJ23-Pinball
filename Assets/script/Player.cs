@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
         health = healthMax;
     }
 
+    public int GetHealthMax() { return health; }
+
     // Update is called once per frame
     void Update()
     {
