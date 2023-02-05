@@ -10,16 +10,13 @@ public class PlayerHealthUI : MonoBehaviour
     public TextMeshProUGUI m_HealthText;
     public Slider m_HealthBar;
     [SerializeField] Image m_HealthBarFill;
-   
-    private void Awake()
-    {
+
+	private IEnumerator Start()
+	{
+        yield return null;
         player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Hurtbox>();
         player.damagedEvent.AddListener(UpdateHealthUI);
         UpdateMaxHealth();
-    }
-
-	private void Start()
-	{
         UpdateHealthUI();
 	}
 

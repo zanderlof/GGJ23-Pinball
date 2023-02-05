@@ -115,7 +115,7 @@ MonoBehaviour:
   m_damagedEvent:
     m_PersistentCalls:
       m_Calls: []
-  deathEvent:
+  m_deathEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2482001763077061429}

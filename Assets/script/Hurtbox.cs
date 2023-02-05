@@ -9,7 +9,7 @@ public class Hurtbox : MonoBehaviour
     [SerializeField] private int m_maxHealth;
     [SerializeField] private int defense;
 	[SerializeField] private UnityEvent m_damagedEvent;
-	[SerializeField] private UnityEvent deathEvent;
+	[SerializeField] private UnityEvent m_deathEvent;
 
 	public int maxHealth
 	{
@@ -18,12 +18,17 @@ public class Hurtbox : MonoBehaviour
 
 	public int currentHealth
 	{
-		get; private set;
+		get; set;
 	}
 
 	public UnityEvent damagedEvent
 	{
 		get { return m_damagedEvent; }
+	}
+
+	public UnityEvent deathEvent
+	{
+		get { return m_deathEvent; }
 	}
 
 	private void Awake()
