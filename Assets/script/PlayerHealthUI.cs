@@ -6,25 +6,29 @@ using UnityEngine.UI;
 
 public class PlayerHealthUI : MonoBehaviour
 {
-    [SerializeField] Player m_Player;
+    private Hurtbox player;
     public TextMeshProUGUI m_HealthText;
     public Slider m_HealthBar;
     [SerializeField] Image m_HealthBarFill;
-   
-    private void Awake()
-    {
-        m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        UpdateMaxHealth();
-    }
 
-    // Update is called once per frame
-    void Update()
+	private IEnumerator Start()
+	{
+        yield return null;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Hurtbox>();
+        player.damagedEvent.AddListener(UpdateHealthUI);
+        UpdateMaxHealth();
+        UpdateHealthUI();
+	}
+
+	// Update is called once per frame
+	void Update()
     {
         
     }
 
-    public void UpdateHealthUI(int health)
+    public void UpdateHealthUI()
     {
+        int health = player.currentHealth;
         m_HealthText.text = "HP: " + health.ToString();
         m_HealthBar.value = health;
 
@@ -37,6 +41,6 @@ public class PlayerHealthUI : MonoBehaviour
 
     void UpdateMaxHealth()
     {
-        m_HealthBar.maxValue = m_Player.GetHealthMax();
+        m_HealthBar.maxValue = player.maxHealth;
     }
 }

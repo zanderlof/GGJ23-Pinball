@@ -2,46 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] int healthMax;
-    [SerializeField] int attack;
-    [SerializeField] int shieldValue;
-    [SerializeField] int healStrength;
     [SerializeField] UIController ui;
 
-    private int health;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        health = healthMax;
+        animator = GetComponent<Animator>();
     }
-
-    public int GetHealthMax() { return health; }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Attack"))
+		{
+            Attack();
+		}
     }
 
-    public void Heal(int heal = -1)
-    {
-        if(heal <= 0)
-        {
-            heal = healStrength;
-        }
-        health += heal;
-        ui.Healed(health);
-    }
-
-    public void Damage(int dmg)
-    {
-        health -= dmg;
-        ui.Damaged(health);
-    }
+    private void Attack()
+	{
+        animator.SetTrigger("Attack");
+	}
 
 
 }

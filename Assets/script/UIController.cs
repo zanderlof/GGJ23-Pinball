@@ -17,16 +17,6 @@ public class UIController : MonoBehaviour
         
     }
 
-    public void Healed(int hp)
-    {
-        healthUI.UpdateHealthUI(hp);
-    }
-
-    public void Damaged(int dmg)
-    {
-        healthUI.UpdateHealthUI(dmg);
-    }
-
     public void BumperHit(Transform pos)
     {
 

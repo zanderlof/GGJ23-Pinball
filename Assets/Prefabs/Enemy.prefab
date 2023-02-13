@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7081536800098425497}
   - component: {fileID: 7081536800098425498}
   - component: {fileID: 7081536800098425499}
-  m_Layer: 0
+  - component: {fileID: 2482001763077061429}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,6 +98,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2482001763077061429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081536800098425501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0170c2e54b000404e94e09c48891b2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHealth: 10
+  defense: 0
+  m_damagedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2482001763077061429}
+        m_TargetAssemblyTypeName: Hurtbox, Assembly-CSharp
+        m_MethodName: DestroyProxy
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7081536800501636360}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7081536800317211849
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7081536800317211848}
   - component: {fileID: 7081536800317211895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CircleIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7081536800317211849}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 3.4837, y: 3.4837, z: 3.4837}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -193,7 +226,7 @@ GameObject:
   - component: {fileID: 7081536800501636405}
   - component: {fileID: 7081536800501636406}
   - component: {fileID: 7081536800501636407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +270,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!95 &7081536800501636406
@@ -285,7 +318,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7081536800892553236}
   - component: {fileID: 7081536800892553235}
-  m_Layer: 0
+  - component: {fileID: 5258132111772588520}
+  m_Layer: 6
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,3 +354,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5258132111772588520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081536800892553237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566988dcb00179d46967aae3b62578cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
+  knockback: 3
