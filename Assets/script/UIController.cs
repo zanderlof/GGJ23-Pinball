@@ -55,5 +55,6 @@ public class UIController : MonoBehaviour
         Fall into gutter
 
     Also want to add player states for attacks executed., 
-    when they're in cooldown and recharged.*/
+    when they're in cooldown and recharged.
+   */
 }
